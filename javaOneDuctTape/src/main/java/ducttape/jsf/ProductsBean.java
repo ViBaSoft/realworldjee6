@@ -19,7 +19,7 @@ public class ProductsBean {
 	@Inject
 	ProductDao productDao;
 	
-	public final List<Product> getProducts() {
+	public List<Product> getProducts() {
 		if(products==null) {
 			/*products = new ArrayList<Product>();
 			products.add(new Product("Product One", 10));
