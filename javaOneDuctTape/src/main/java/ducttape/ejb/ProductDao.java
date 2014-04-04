@@ -11,7 +11,7 @@ import ducttape.entities.Product;
 @Stateless
 public class ProductDao {
 
-	@PersistenceContext
+	@PersistenceContext(unitName="forge-default")
 	EntityManager em;
 	
 	public List<Product> listProducts() {

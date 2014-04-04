@@ -3,7 +3,6 @@
   <persistence-unit name="forge-default" transaction-type="JTA">
     <description>Forge Persistence Unit</description>
     <provider>org.hibernate.ejb.HibernatePersistence</provider>
-    <!-- <jta-data-source>ducttape</jta-data-source> -->
     <jta-data-source>java:jboss/datasources/DerbyDS</jta-data-source>
     <exclude-unlisted-classes>false</exclude-unlisted-classes>
     <properties>
@@ -11,6 +10,7 @@
       <property name="hibernate.show_sql" value="true"/>
       <property name="hibernate.format_sql" value="true"/>
       <property name="hibernate.transaction.flush_before_completion" value="true"/>
+      <property name="hibernate.dialect" value="org.hibernate.dialect.DerbyDialect" />
     </properties>
   </persistence-unit>
 </persistence>
