@@ -20,7 +20,7 @@ public class ProductsBean {
 	ProductDao productDao;
 	
 	public List<Product> getProducts() {
-		if(products==null) {
+		if(products==null || products.size() < 1) {
 			/*products = new ArrayList<Product>();
 			products.add(new Product("Product One", 10));
 			products.add(new Product("Product Two", 20));*/

@@ -5,7 +5,11 @@
 	
 	<ui:define name="content">
 		<h:form>
-			<h:dataTable value="#{productsBean.products}" vars="product">
+			<h:dataTable value="#{productsBean.products}" var="product">
+				<h:column>
+					<f:facet name="header">Product Id</f:facet>
+					#{product.id}
+				</h:column>
 				<h:column>
 					<f:facet name="header">Name</f:facet>
 					#{product.name}

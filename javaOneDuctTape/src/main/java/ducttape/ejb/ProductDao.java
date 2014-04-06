@@ -13,7 +13,7 @@ public class ProductDao {
 
 	@PersistenceContext(unitName="forge-default")
 	EntityManager em;
-	
+
 	public List<Product> listProducts() {
 		return em.createQuery("select p from Product p",Product.class).getResultList();
 	}

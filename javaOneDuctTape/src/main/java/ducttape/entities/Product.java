@@ -9,13 +9,15 @@ public class Product {
 	@Id @GeneratedValue
 	long id;
 	
+	public final long getId() {
+		return id;
+	}
 	private String name;
 	private double price;
 	
 	public Product() {
 	}
 
-	
 	public Product(String name, double price) {
 		super();
 		this.name = name;
@@ -35,6 +37,6 @@ public class Product {
 	public final void setPrice(double price) {
 		this.price = price;
 	}
-	
+
 
 }
