@@ -29,6 +29,13 @@
       <scope>provided</scope>
     </dependency>
     <dependency>
+    	<groupId>org.jboss.arquillian</groupId>
+		<artifactId>arquillian-bom</artifactId>
+		<version>${version.arquillian_core}</version>
+		<type>pom</type>
+		<scope>import</scope>
+    </dependency>
+    <dependency>
       <groupId>javax.enterprise</groupId>
       <artifactId>cdi-api</artifactId>
       <scope>provided</scope>
@@ -91,4 +98,16 @@
       </plugin>
     </plugins>
   </build>
+  <profiles>
+  	<profile>
+  		<id>JBOSS_AS_REMOTE_7.X</id>
+  		<dependencies>
+  			<dependency>
+  				<groupId>org.jboss.as</groupId>
+				<artifactId>jboss-as-arquillian-container-remote</artifactId>
+				<version>7.1.1.Final</version>
+  			</dependency>
+  		</dependencies>
+  	</profile>
+  </profiles>
 </project>
