@@ -40,3 +40,6 @@ Setup Required:
 		                        <xa-datasource-class>org.apache.derby.jdbc.ClientXADataSource</xa-datasource-class>
 		    </driver>
     </datasources>
+3) Install Arquillian using forge
+	forge$> forge find-plugin test <-- this will find the plugins for unit testing, and list arquillian and other plugins available under test
+	forge$> forge install-plugin arquillian <-- this will install arquillian plugin as listed in above command, also you can directly run the above command
