@@ -1,5 +1,7 @@
 package ducttape.ejb;
 
+import java.util.List;
+
 import ducttape.ejb.ProductDao;
 import ducttape.entities.Product;
 
@@ -35,9 +37,15 @@ public class ProductDaoTest
    }
 
    @Test
-   public void should_be_deployed()
+   public void testIsDeployed()
    {
-//      Assert.assertNotNull(productdao);
-	   Assert.assertNull(productdao);
+      Assert.assertNotNull(productdao);
+//	   Assert.assertNull(productdao);
+   }
+   
+   @Test
+   public void testListProducts() {
+	   List<Product> productsList = productdao.listProducts();
+	   assertThat(productsList.size(),is(4));
    }
 }

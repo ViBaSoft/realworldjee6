@@ -99,7 +99,7 @@
         <artifactId>maven-war-plugin</artifactId>
         <version>2.4</version>
         <configuration>
-          <failOnMissingWebXml>false</failOnMissingWebXml>
+          <failOnMissingWebXml>true</failOnMissingWebXml>
         </configuration>
       </plugin>
     </plugins>
@@ -120,11 +120,15 @@
           </plugin>
         </plugins>
       </build>
+      <activation>
+            <activeByDefault>true</activeByDefault>
+      </activation>
       <dependencies>
         <dependency>
           <groupId>org.jboss.as</groupId>
           <artifactId>jboss-as-arquillian-container-remote</artifactId>
           <version>7.1.1.Final</version>
+          <scope>test</scope>
         </dependency>
       </dependencies>
     </profile>
