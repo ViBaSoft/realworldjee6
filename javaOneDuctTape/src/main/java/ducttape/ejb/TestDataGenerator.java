@@ -26,8 +26,8 @@ public class TestDataGenerator {
 	
 	@PostConstruct
 	public void initializeData() {
-		em.persist(new Product("Pant", 50));
 		em.persist(new Product("Shirt", 40));
+		em.persist(new Product("Pant", 50));
 		em.persist(new Product("Vest", 20));
 		em.persist(new Product("Brief", 10));
 	}
